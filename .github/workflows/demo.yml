@@ -1,0 +1,8 @@
+name: Demo
+on: [push, workflow_dispatch]
+jobs:
+  hello:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "running on $(hostname)"
